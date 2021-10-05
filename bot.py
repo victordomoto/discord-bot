@@ -24,7 +24,7 @@ async def on_message(message):
     channel = str(message.channel.name)
     print(f'{username}: {user_message} ({channel})')
 
-    #mensagens do geral:
+    #mensagens no geral:
     if message.author == client.user:
         return
     if message.channel.name == 'geral':
@@ -38,21 +38,6 @@ async def on_message(message):
             await message.channel.send(response)
             return
     #mensagens em aed2:
-    if message.author == client.user:
-        return
-    if message.channel.name == 'aed2':
-        if user_message.lower()=='graph':
-            await message.channel.send(f'https://github.com/victordomoto/data-structure-assignments/blob/main/graph/adjacency_matrix.c')
-        elif user_message.lower()=='list':
-            await message.channel.send(f'https://github.com/victordomoto/data-structure-assignments/blob/main/lists/linked_list.c')
-            return 
-        elif user_message.lower()=='stack':
-            await message.channel.send(f'https://github.com/victordomoto/data-structure-assignments/blob/main/stack/ex1_dinamic.c')
-            return
-        elif user_message.lower()=='queue':
-            await message.channel.send(f'https://github.com/victordomoto/data-structure-assignments/blob/main/queue/TAD-queue.c')
-            return
-        
-        
+
     
 client.run(TOKEN)
