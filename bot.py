@@ -37,7 +37,5 @@ async def on_message(message):
             response = f'{random.randrange(1000000)}'
             await message.channel.send(response)
             return
-    #mensagens em aed2:
-
     
 client.run(TOKEN)
